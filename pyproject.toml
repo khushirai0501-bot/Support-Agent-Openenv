@@ -6,16 +6,20 @@ build-backend = "setuptools.build_meta"
 name = "support-agent-openenv"
 version = "0.1.0"
 description = "AI Agent environment for customer support automation"
-authors = [
-    {name = "Khushi Rai"}
-]
+authors = [{name = "Khushi Rai"}]
+# Required dependency add kar di hai
 dependencies = [
     "fastapi",
     "uvicorn",
     "pydantic",
     "pyyaml",
-    "requests"
+    "requests",
+    "openenv>=0.2.0" 
 ]
+
+# Ye entry point unhe chahiye tha
+[project.scripts]
+server = "main:app"
 
 [tool.setuptools]
 packages = ["."]
