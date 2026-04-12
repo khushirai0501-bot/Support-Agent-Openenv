@@ -1,19 +1,19 @@
-
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "support-agent-openenv"
-version = "0.1.0"
-description = "AI Agent environment"
+version = "0.1.1"
+description = "AI Agent environment with LLM Proxy"
 authors = [{name = "Khushi Rai"}]
 dependencies = [
     "fastapi",
     "uvicorn",
-    "requests",
     "pydantic",
     "pyyaml",
+    "requests",
+    "openai",
     "openenv-core>=0.2.0"
 ]
 
